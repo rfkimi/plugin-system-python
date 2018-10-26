@@ -30,7 +30,7 @@ class EggsellentCook:
 
     def add_ingredients(self):
         results = self.hook.eggsample_add_ingredients(
-            ingredient=self.FAVORITE_INGREDIENTS
+            ingredients=self.FAVORITE_INGREDIENTS
         )
         my_ingredients = list(self.FAVORITE_INGREDIENTS)
         other_ingredients = list(itertools.chain(*results))
@@ -40,7 +40,7 @@ class EggsellentCook:
         random.shuffle(self.ingredients)
 
     def serve_the_food(self):
-        condiments_comments = self.hook.eggsample_prep_condimemts(
+        condiments_comments = self.hook.eggsample_prep_condiments(
             condiments=condiments_tray
         )
         print(f"Your food. Enjoy some {', '.join(self.ingredients)}")
